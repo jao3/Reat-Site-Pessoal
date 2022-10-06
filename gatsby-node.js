@@ -6,4 +6,12 @@ exports.createPages = async ({ actions }) => {
     context: {},
     defer: true,
   })
-}
+
+  actions.setWebpackConfig ({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+      },
+    },
+  });
+};

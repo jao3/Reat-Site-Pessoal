@@ -3,13 +3,14 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Cards from "../components/cards"
+import { GlobalStyle } from "../styles"
 
 const SecondPage = () => (
-  <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  <>
+    <GlobalStyle/>
+    <Cards/>
+  </>
 )
 
 export const Head = () => <Seo title="Page two" />
