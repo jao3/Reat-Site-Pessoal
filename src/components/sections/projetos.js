@@ -84,8 +84,8 @@ const ProjectLinks = styled.div`
 const Projetos = () => {
 
   return (
-    <StyledProjetosSection>
-        <h2 className='numbered-heading'>Alguns dos meus projetos</h2>
+    <StyledProjetosSection id='projects'>
+        <h2 className='numbered-heading'>Meus projetos</h2>
             <ProjectContainer>
                 {
                     projectData.map(({id, title, description, tech, codeLink, liveLink}) => (

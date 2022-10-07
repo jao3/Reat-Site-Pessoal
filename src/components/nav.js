@@ -8,6 +8,7 @@ import Menu from './menu';
 const StyledHeader = styled.header`
 
     ${mixins.flexBetween};
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     z-index: 11;
@@ -34,7 +35,7 @@ const StyledNav = styled.nav`
     align-items: center;
     justify-content: space-between;
     position: relative;
-    width: 100%;
+    width: 100vw;
     color: var(--lightest-slate);
     font-family: var(--font-mono);
     counter-reset: item 0;
@@ -85,14 +86,14 @@ const NavLinks = styled.div`
 const Nav = ({isHome}) => {
     const ResumeLink = (
         <a className="resume-button" href="/" target="_blank" rel="noopener noreferrer">
-          Resume
+          Resumo
         </a>
       );
     return (
     <StyledHeader>
-        <>
+        
         <StyledNav>
-            <a>Logo</a>
+            <Link href="/#home">Logo</Link>
             <NavLinks>
             <ol>
                {navLinks &&
@@ -106,7 +107,7 @@ const Nav = ({isHome}) => {
             </NavLinks>
         </StyledNav>
         <Menu/>
-        </>
+        
     </StyledHeader>
   )
 }

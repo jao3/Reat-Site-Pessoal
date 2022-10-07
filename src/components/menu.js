@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { navLinks } from '../data/config';
 import { Link } from 'gatsby';
+import mixins from '../styles/mixins';
 
 const HamburguerBtn = styled.a`
     position: relative;
@@ -64,6 +65,10 @@ const MobileMenu = styled.div`
 
 `;
 const MobileLinks = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     ol {
         display: flex;
         align-items: center;
@@ -76,7 +81,8 @@ const MobileLinks = styled.div `
             margin: 0 5px;
             position: relative;
             counter-increment: item 1;
-            font-size: var(--fz-md);
+            font-size: var(--fz-xl);
+            font-family: var(--font-mono);
 
             a{
                 padding: 10px;
@@ -85,17 +91,29 @@ const MobileLinks = styled.div `
                     content: '0' counter(item) '.';
                     margin-right: 5px;
                     color: var(--green);
-                    font-size: var(--fz-xxs);
+                    font-size: var(--fz-md);
                     text-align: right;
+                    font-family: var(--font-mono);
                 }
             }
         }
+    }
+    .resume-button {
+        ${mixins.smallButton};
+        font-size: var(--fz-xs);
+        padding: 1rem 2rem;
     }
 `;
 
 const Button = styled.button ``;
 
 const Menu = () => {
+
+    const ResumeLink = (
+        <a className="resume-button" href="/" target="_blank" rel="noopener noreferrer">
+          Resumo
+        </a>
+      );
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -115,7 +133,9 @@ const Menu = () => {
                         </li>
                     ))} 
                 </ol>
+                <div>{ResumeLink}</div>
               </MobileLinks>
+
           </MobileMenu>
     </>
   )

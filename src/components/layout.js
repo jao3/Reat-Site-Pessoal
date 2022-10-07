@@ -5,6 +5,7 @@ import Nav from "./nav.js"
 import Email from './email'
 import Social from './social'
 import styled from "styled-components"
+import Footer from "./footer"
 
 const StyledContent = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
         <div id="content">
           {children}
         </div>
+        <Footer/>
       </StyledContent>
     </>
   )

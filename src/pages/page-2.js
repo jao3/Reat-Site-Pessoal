@@ -5,11 +5,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Cards from "../components/cards"
 import { GlobalStyle } from "../styles"
+import Nav from "../components/nav"
 
 const SecondPage = () => (
   <>
     <GlobalStyle/>
-    <Cards/>
+    <Nav/>
   </>
 )
 

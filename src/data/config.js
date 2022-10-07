@@ -1,7 +1,5 @@
 
 
-const { FaJoomla } = require("react-icons/fa");
-
 module.exports = {
     email: 'joaoo.bio@gmail.com',
     socialMedia: [
@@ -25,7 +23,7 @@ module.exports = {
     ],
     navLinks: [
         {
-          name: 'About',
+          name: 'Sobre',
           url: '/#about',
         },
         {
@@ -33,11 +31,11 @@ module.exports = {
           url: '/#jobs',
         },
         {
-          name: 'Work',
+          name: 'Projetos',
           url: '/#projects',
         },
         {
-          name: 'Contact',
+          name: 'Contato',
           url: '/#contact',
         },
       ],
@@ -47,7 +45,7 @@ module.exports = {
         id: 1,
         title: "Psi-Care",
         description: "Site desenvolvido em HTML, SASS e JavaScript para captação, 100% responsivo.",
-        tech: "HTML5 - SASS - JavaScript ",
+        tech: "HTML5 | SASS | JavaScript ",
         codeLink: 'facebook.com',
         liveLink: 'facebook.com',
       },
@@ -55,7 +53,7 @@ module.exports = {
         id: 2,
         title: "Site Pessoal",
         description: "Site desenvolvido para aprensentação do meu portfolio",
-        tech: "React - Styled-components - JavaScript",
+        tech: "React | Styled-components | JavaScript",
         codeLink: 'facebook.com',
         liveLink: 'facebook.com',
       },

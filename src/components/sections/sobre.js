@@ -112,7 +112,7 @@ const RightImg = styled.img `
 const Sobre = () => {
   const skills = ['JavaScript', 'TypeScript', 'React', 'HTML5', 'CSS']
   return (
-    <AboutSection>
+    <AboutSection id='about'>
         <h2 className="numbered-heading">Sobre Mim.</h2>
         <div className='inner'>
           <TextBase>

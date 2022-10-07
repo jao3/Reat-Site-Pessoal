@@ -53,6 +53,17 @@ const GlobalStyle = createGlobalStyle `
     border-radius: 10px;
   }
 
+  html {
+    box-sizing: border-box;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   body{
     margin: 0;
     width: 100%;

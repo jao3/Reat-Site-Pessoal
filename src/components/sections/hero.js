@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import mixins from '../../styles/mixins';
+import pdf from '../../assets/Curriculo João - TI.pdf'
 
 const StyledHeroSection = styled.section`
     ${mixins.flexCenter};
@@ -54,17 +55,17 @@ const Hero = () => {
     const five = (
         <a
             className='email-link'
-            href='/'
+            href='/Curriculo João - TI.pdf'
             target='_blank'
             rel='noreferrer'>
-            clica aqui arrombado!
+            Download CV 
         </a>
     );
     
     const items = [one, two, three, four, five];
 
   return (
-    <StyledHeroSection>
+    <StyledHeroSection id="home">
         <>
             {items.map((item, i) => (
                 <div key={i}>{item}</div>
