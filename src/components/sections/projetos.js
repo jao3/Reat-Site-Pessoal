@@ -2,9 +2,9 @@ import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
 import Icon from '../../data/icons';
-import img from '../../images/Site.jpg'
+//import img from '../../images/breve.jpg'
 import mixins from '../../styles/mixins';
-import { projectData } from '../../data/config';
+import  projectData  from '../../data/projetos';
 
 const StyledProjetosSection =styled.section`
     
@@ -65,15 +65,19 @@ const ProjectImg = styled.img`
     overflow: hidden;
 
     mix-blend-mode: multiply;
-    filter: contrast(1);
+    filter: grayscale(100%) contrast(1);
     transition: var(--transition);
     background-color: var(--green);
 
     &:hover,
     &:focus{
+        filter: none;
         mix-blend-mode: normal;
     }
-    
+    @media (max-width: 1080px) {
+        width: auto;
+        height: auto;
+    }
 `;
 const ProjectLinks = styled.div`
     display: flex;
@@ -87,15 +91,16 @@ const Projetos = () => {
     <StyledProjetosSection id='projects'>
         <h2 className='numbered-heading'>Meus projetos</h2>
             <ProjectContainer>
-                {
-                    projectData.map(({id, title, description, tech, codeLink, liveLink}) => (
+                {projectData &&
+                    projectData.map(({id,image, title, description, tech, codeLink, liveLink}) => (
                         <ProjectItem key={id}>
                             <div className='img-back'>
                             <ProjectImg
                                 className='img'
-                                src={img}
+                                src={image}
                                 width={300}
-                                quality={95}
+                                height={135}
+                                //quality={95}
                                 formats={['AUTO', 'WEBP', 'AVIF']}
                                 alt='Headshot'
                             >                    
@@ -105,7 +110,7 @@ const Projetos = () => {
                             <p>{description}</p>
                             <p className='tech'>{tech}</p>
                             <ProjectLinks>
-                                <Link className='link'>GitHub<Icon name='GitHub'/></Link>
+                                <Link className='link' href={codeLink}>GitHub<Icon name='GitHub'/></Link>
                                 <Link className='link'>Demo<Icon name='External'/></Link>
                             </ProjectLinks>
                         </ProjectItem>

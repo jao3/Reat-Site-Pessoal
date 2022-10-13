@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FaLinkedinIn, FaGithub, FaWhatsapp, FaInstagram, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaLinkedinIn, FaGithub, FaWhatsapp, FaInstagram, FaExternalLinkAlt, FaBriefcase, FaGraduationCap } from 'react-icons/fa'
 
 const Icon = ({name}) => {
     switch (name){
@@ -14,6 +14,10 @@ const Icon = ({name}) => {
             return <FaWhatsapp />
         case 'External':
             return <FaExternalLinkAlt/>
+        case 'Experience':
+            return <FaBriefcase/>
+        case 'Education':
+            return <FaGraduationCap/>
     }
 };
 

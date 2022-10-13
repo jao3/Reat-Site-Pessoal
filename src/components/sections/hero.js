@@ -43,19 +43,19 @@ const Hero = () => {
     
     const one = <h1>Olá, meu nome é</h1>;
     const two = <h2 className='big-heading'>João Araújo.</h2>;
-    const three = <h3 className='big-heading'>desenvolvedor Front-End.</h3>;
+    const three = <h3 className='big-heading'>Front-End Developer.</h3>;
     const four = (
         <>
             <p>
-            Sou um engenheiro de software especializado em construir (e ocasionalmente projetar) experiências digitais excepcionais.
-            dasdljashdlksahdkjashdkjahsd a shdjkas hdkjas djsa
+            Sou um desenvolvedor de software especializado em construir (e ocasionalmente projetar) aplicações Fron-End
+            e futuramente mobile.
             </p>
         </>
     );
     const five = (
         <a
             className='email-link'
-            href='/Curriculo João - TI.pdf'
+            href={pdf}
             target='_blank'
             rel='noreferrer'>
             Download CV 

@@ -21,7 +21,7 @@ const Creditos = styled.div`
 export const Footer = () => {
   return (
     <FooterSection>
-      <Creditos><span>criardo por joaozinho da massa</span></Creditos>
+      <Creditos><span>© 2022 Criado por João Araújo</span></Creditos>
     </FooterSection>
   )
 }

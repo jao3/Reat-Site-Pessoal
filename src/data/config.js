@@ -1,5 +1,4 @@
-
-
+//import img1 from '../images/joao.jpg'
 module.exports = {
     email: 'joaoo.bio@gmail.com',
     socialMedia: [
@@ -27,8 +26,8 @@ module.exports = {
           url: '/#about',
         },
         {
-          name: 'Experience',
-          url: '/#jobs',
+          name: 'Qualificações',
+          url: '/#xp',
         },
         {
           name: 'Projetos',
@@ -44,14 +43,16 @@ module.exports = {
       {
         id: 1,
         title: "Psi-Care",
+        //image: {img1},
         description: "Site desenvolvido em HTML, SASS e JavaScript para captação, 100% responsivo.",
         tech: "HTML5 | SASS | JavaScript ",
-        codeLink: 'facebook.com',
+        codeLink: 'https://www.github.com/jao3',
         liveLink: 'facebook.com',
       },
       {
         id: 2,
         title: "Site Pessoal",
+        //image: {img1},
         description: "Site desenvolvido para aprensentação do meu portfolio",
         tech: "React | Styled-components | JavaScript",
         codeLink: 'facebook.com',
@@ -60,6 +61,7 @@ module.exports = {
       {
         id: 3,
         title: "Em breve",
+        //image: {img1},
         description: "O proximo projeto a ser desenvolvido pode ser o seu!",
         tech: "Lorem ipsum dolor sit amet consectetur",
         codeLink: 'facebook.com',

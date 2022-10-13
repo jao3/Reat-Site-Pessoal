@@ -43,10 +43,10 @@ const Contato = () => {
         <h2 className='numbered-heading overline'>Qual o proximo passo?</h2>
         <h2 className='title'>Entrar em contato</h2>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt expedita voluptas voluptatum asperiores fuga. Minima unde ut inventore laborum, hic adipisci nulla dicta ad quas voluptatum nam, iusto sit culpa.
+            Estou aberto a novas oportunidades, minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou quer dizer oi, pode clicar no botão abaixo.
         </p>
         <button className='email-link'>
-            Diga olá!
+            <a href='https://api.whatsapp.com/send?phone=5561982883180&text=No%20que%20posso%20te%20ajudar%3F'>Mande mensagem!</a>
         </button>
     </ContactContainer>
   )

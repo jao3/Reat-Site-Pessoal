@@ -117,11 +117,12 @@ const Sobre = () => {
         <div className='inner'>
           <TextBase>
             <div>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo facere enim dolorem voluptatibus nulla eum officiis sint earum incidunt possimus, eius quidem, consequatur, id veritatis! Perspiciatis laborum in vero qui.</p>
+              <p>Formado em analise e desenvolvimento de sistemas e viciado em café, estou em busca de uma oportunidade para entrar no mercado de tecnologia.</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil fuga mollitia aliquam, possimus blanditiis, ab aut quae rem magnam
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex itaque numquam porro officia distinctio dolorem delectus vel similique aspernatur mollitia omnis corporis eius inventore eum suscipit facere assumenda, dolorum expedita?
+                Durante meu estagio no TST me apaixonei por front-end onde trabalhei com HTML5, CSS3, JavaScript e Angular, desde entao venho tentando aprimorar ao maximo nessas tecnologias
+                com bastante foco na responsividade e experiencia do usuario.
               </p>
+              <p>Atualmente focado nessas tecnologias.</p>
             </div>
             <ul className='Skills-list'>
               {skills && skills.map ((skill,i) => <li key={i}>{skill}</li>)}
