@@ -7,11 +7,4 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 
-  actions.setWebpackConfig ({
-    resolve: {
-      alias: {
-        '@components': path.resolve(__dirname, 'src/components'),
-      },
-    },
-  });
 };
