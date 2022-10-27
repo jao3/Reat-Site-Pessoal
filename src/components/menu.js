@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { navLinks } from '../data/config';
 import { Link } from 'gatsby';
 import mixins from '../styles/mixins';
+import pdf from '../assets/Curriculo João - TI.pdf'
 
 const HamburguerBtn = styled.a`
     position: relative;
@@ -110,7 +111,7 @@ const Button = styled.button ``;
 const Menu = () => {
 
     const ResumeLink = (
-        <a className="resume-button" href="/" target="_blank" rel="noopener noreferrer">
+        <a className="resume-button" href={pdf} target="_blank" rel="noopener noreferrer">
           Resumo
         </a>
       );
@@ -129,7 +130,7 @@ const Menu = () => {
                 {navLinks &&
                     navLinks.map(({ url, name }, i) => (
                         <li key={i}>
-                            <Link to={url}>{name}</Link>
+                            <Link to={url} onClick = {() => handleClick()} clicked ={click}>{name}</Link>
                         </li>
                     ))} 
                 </ol>

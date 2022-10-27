@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { navLinks } from '../data/config'
 import mixins from '../styles/mixins';
 import Menu from './menu';
+import { motion } from 'framer-motion';
+import {  navAnimation } from '../styles/animations'
+import pdf from '../assets/Curriculo João - TI.pdf'
 
 const StyledHeader = styled.header`
 
@@ -85,24 +88,37 @@ const NavLinks = styled.div`
 
 const Nav = ({isHome}) => {
     const ResumeLink = (
-        <a className="resume-button" href="/" target="_blank" rel="noopener noreferrer">
+        <a className="resume-button" href={pdf} target="_blank" rel="noopener noreferrer">
           Resumo
         </a>
       );
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        show: {
+          y: 0,
+          opacity: 1
+        }
+      };
+
     return (
     <StyledHeader>
         
         <StyledNav>
             <Link href="/#home">Logo</Link>
             <NavLinks>
-            <ol>
+            <motion.ol
+                variants={navAnimation}
+                initial="hidden"
+                animate="show"
+            >
                {navLinks &&
                 navLinks.map(({ url, name }, i) => (
-                    <li key={i}>
+                    <motion.li key={i} variants={item}>
                         <Link to={url}>{name}</Link>
-                    </li>
+                    </motion.li>
                 ))} 
-            </ol>
+            </motion.ol>
             <div>{ResumeLink}</div>
             </NavLinks>
         </StyledNav>

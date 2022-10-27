@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import mixins from '../../styles/mixins';
 import pdf from '../../assets/Curriculo João - TI.pdf'
+import { motion } from 'framer-motion';
+import { homeAnimation } from '../../styles/animations';
 
 const StyledHeroSection = styled.section`
     ${mixins.flexCenter};
@@ -66,11 +68,14 @@ const Hero = () => {
 
   return (
     <StyledHeroSection id="home">
-        <>
+        <motion.div
+            variants={homeAnimation}
+            transition={{delay: 0.3, duration: 0.6, type: "tween"}}
+        >
             {items.map((item, i) => (
                 <div key={i}>{item}</div>
             ))}
-        </>
+        </motion.div>
     </StyledHeroSection>
   )
 }

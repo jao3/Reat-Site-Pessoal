@@ -5,11 +5,14 @@ import Icon from '../../data/icons';
 //import img from '../../images/breve.jpg'
 import mixins from '../../styles/mixins';
 import  projectData  from '../../data/projetos';
+import {motion} from 'framer-motion'
+import {  portfolioAnimation } from '../../styles/animations'
+import { useScroll } from '../../hooks/useScroll'
 
 const StyledProjetosSection =styled.section`
     
 `;
-const ProjectContainer = styled.div`
+const ProjectContainer = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
@@ -23,7 +26,7 @@ const ProjectContainer = styled.div`
         gap: 1.5rem;
     }
 `;
-const ProjectItem = styled.article`
+const ProjectItem = styled(motion.article)`
     background-color: var(--light-navy);
     padding: 1.3rem;
     border-radius: var(--border-radius);
@@ -87,13 +90,29 @@ const ProjectLinks = styled.div`
 
 const Projetos = () => {
 
+  const [element, controls] = useScroll();
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return (
-    <StyledProjetosSection id='projects'>
+    <StyledProjetosSection id='projects' ref={element}>
         <h2 className='numbered-heading'>Meus projetos</h2>
-            <ProjectContainer>
+            <ProjectContainer 
+                variants={portfolioAnimation}
+                animate={controls}
+                transition={{delay: 0.5, duration: 0.6, type: "tween"}}
+            >
                 {projectData &&
                     projectData.map(({id,image, title, description, tech, codeLink, liveLink}) => (
-                        <ProjectItem key={id}>
+                        <ProjectItem key={id}
+                            variants= {item}
+                            animate= {controls}
+                            >
                             <div className='img-back'>
                             <ProjectImg
                                 className='img'
@@ -111,7 +130,7 @@ const Projetos = () => {
                             <p className='tech'>{tech}</p>
                             <ProjectLinks>
                                 <Link className='link' href={codeLink}>GitHub<Icon name='GitHub'/></Link>
-                                <Link className='link'>Demo<Icon name='External'/></Link>
+                                <Link className='link' href={liveLink}>Demo<Icon name='External'/></Link>
                             </ProjectLinks>
                         </ProjectItem>
                     ))

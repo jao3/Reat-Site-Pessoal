@@ -2,23 +2,23 @@ const Experience = [
     {
         id: 1,
         name: "Education",
+        ano: "2013 - 2015",
+        titulo: "CIL - Brasília ",
+        desc: "Curso de ingles avançado no centro interescolar de linguas em brasilia.",
+    },
+    {
+        id: 2,
+        name: "Education",
         ano: "2016 - 2019",
         titulo: "UniProjeção",
         desc: "Graduação completa em analise e desenvolvimento de sistemas.",
     },
     {
-        id: 2,
+        id: 3,
         name: "Education",
         ano: "2022 - 2025",
         titulo: "ANBIMA - CPA-20",
         desc: "Certificação na área financeira.",
-    },
-    {
-        id: 3,
-        name: "Education",
-        ano: "2013 - 2015",
-        titulo: "CIL - Brasília ",
-        desc: "Curso de ingles avançado no centro interescolar de linguas em brasilia.",
     },
     {
         id: 4,
