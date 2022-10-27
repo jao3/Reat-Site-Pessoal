@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import img from '../../images/joao.jpg'
+import {motion} from 'framer-motion'
+import { aboutAnimation } from '../../styles/animations'
+import { useScroll } from '../../hooks/useScroll'
 
 const AboutSection = styled.section`
   max-width: 900px;
@@ -111,10 +114,17 @@ const RightImg = styled.img `
 
 const Sobre = () => {
   const skills = ['JavaScript', 'TypeScript', 'React', 'HTML5', 'CSS']
+
+  const [element, controls] = useScroll();
   return (
-    <AboutSection id='about'>
+    <AboutSection id='about' ref={element}>
         <h2 className="numbered-heading">Sobre Mim.</h2>
-        <div className='inner'>
+        <motion.div 
+          className='inner'
+          variants={aboutAnimation}
+          animate={controls}
+          transition={{delay: 0.3, duration: 0.6, type: "tween"}}
+          >
           <TextBase>
             <div>
               <p>Formado em analise e desenvolvimento de sistemas e viciado em café, estou em busca de uma oportunidade para entrar no mercado de tecnologia.</p>
@@ -140,7 +150,7 @@ const Sobre = () => {
               ></RightImg>
             </div>
           </ImgContainer>
-        </div>
+        </motion.div>
     </AboutSection>
   )
 }

@@ -9,12 +9,14 @@ import Contato from "../components/sections/contato"
 import propTypes from "prop-types";
 import Trabalhos from "../components/sections/trabalhos";
 import Projetos from "../components/sections/projetos";
+import { motion } from "framer-motion";
 
 const StyledMainContainer = styled.main `
   counter-reset: section;
 `;
 
 const IndexPage = ({location}) => (
+  <motion.div initial= 'hidden' animate= "show">
   <Layout location = {location}>
         <StyledMainContainer>
           <Hero />
@@ -24,6 +26,7 @@ const IndexPage = ({location}) => (
           <Contato />
         </StyledMainContainer>
   </Layout>
+  </motion.div>
 )
 
 IndexPage.protoTypes = {

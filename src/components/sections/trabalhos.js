@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import Experience from '../../data/experiencia';
 import Cards from '../cards';
+import { motion } from 'framer-motion'
+import { qualificationtAnimation } from '../../styles/animations';
+import { useScroll } from '../../hooks/useScroll';
 
 const StyledTrabalhosSection = styled.section`
     max-width: 1200px;
@@ -32,10 +35,15 @@ const StyledTimeline = styled.div`
 `;
 
 const Trabalhos = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledTrabalhosSection id='xp'>
+    <StyledTrabalhosSection id='xp' ref={element}>
         <h2 className='numbered-heading'>Qualificações</h2>
-        <div className='inner'>
+        <motion.div className='inner'
+          variants={qualificationtAnimation}
+          animate={controls}
+          transition={{delay: 0.3, duration: 0.6, type: "tween"}}
+        >
           <StyledTabList>
             <StyledTimeline>
               {Experience.map((val, id) => {
@@ -68,7 +76,7 @@ const Trabalhos = () => {
               })}
             </StyledTimeline>
           </StyledTabList>
-        </div>
+        </motion.div>
     </StyledTrabalhosSection>
   )
 }

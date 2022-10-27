@@ -16,7 +16,7 @@ module.exports = {
         },
         {
             name: 'WhatsApp',
-            url: 'https://api.whatsapp.com/send?phone=5561982883180&text=No%20que%20posso%20te%20ajudar%3F'
+            url: 'https://api.whatsapp.com/send?phone=5561982883180&text=Ol%C3%A1!'
         }
 
     ],

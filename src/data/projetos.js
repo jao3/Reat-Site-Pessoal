@@ -9,8 +9,8 @@ const projectData = [
       image: img1,
       description: "Site desenvolvido em HTML, SASS e JavaScript para captação, 100% responsivo.",
       tech: "HTML5 | SASS | JavaScript ",
-      codeLink: 'facebook.com',
-      liveLink: 'facebook.com',
+      codeLink: 'https://github.com/jao3/psi-care',
+      liveLink: 'https://planilhapsicare.com.br/',
     },
     {
       id: 2,
@@ -18,8 +18,8 @@ const projectData = [
       image: img2,
       description: "Site desenvolvido para aprensentação do meu portfolio",
       tech: "React | Styled-components | JavaScript",
-      codeLink: 'facebook.com',
-      liveLink: 'facebook.com',
+      codeLink: 'https://github.com/jao3/Reat-Site-Pessoal',
+      liveLink: 'https://jao3.github.io/Reat-Site-Pessoal/',
     },
     {
       id: 3,
